@@ -4,9 +4,59 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalDraft.Views"
-        mc:Ignorable="d"
+        mc:Ignorable="d"  FontSize="18"
         Title="ShellView" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            
+        </Grid.RowDefinitions>
         
+        <!--0-->
+        <Image Source="/Images/finaldraft_logo.png" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"></Image>
+
+        <!-- Row 1 --><!--
+        <TextBlock Text="{Binding Path=ProjectNumber, Mode=OneWay}" Grid.Row="2" Grid.Column="1"></TextBlock>
+
+        --><!-- Row 2 --><!--
+        <TextBox MinWidth="100" Grid.Row="3" Grid.Column="1" x:Name="ProjectNumber"></TextBox>
+
+        --><!-- Row 3 --><!--
+        <TextBlock Text="{Binding Path=DateDue, Mode=OneWay}" Grid.Row="4" Grid.Column="1"></TextBlock>
+
+        --><!-- Row 4 --><!--
+        <TextBox MinWidth="100" Grid.Row="5" Grid.Column="1" x:Name="DateDue"></TextBox>-->
+
+        <!-- Row 2 -->
+        <ListBox Grid.Row="2" Grid.Column="1"  x:Name="Projects"
+                 SelectedItem="{Binding Path=SelectedProject, Mode=OneWayToSource}"
+                 DisplayMemberPath="Address"></ListBox>
+        <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Vertical" Margin="10 0 0 0">
+            <TextBlock  x:Name="SelectedProject_ProjectNumber" />
+            <TextBlock  x:Name="SelectedProject_Address" />
+        </StackPanel>
+        <!-- Row 6 --><!--
+        <Button x:Name="ClearText" Grid.Row="7" Grid.Column="1">Clear Text</Button>-->
+        
+        <!-- Row 3-->
+        <Button x:Name="LoadNewProject" Grid.Row="3" Grid.Column="1">Add New Project</Button>
+        <Button x:Name="LoadNewCustomer" Grid.Row="3" Grid.Column="2">Add New Customer</Button>
+        <!--Row 4 -->
+        <ContentControl Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4"
+                        x:Name="ActiveItem" />
+
     </Grid>
 </Window>
