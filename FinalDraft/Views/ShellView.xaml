@@ -48,8 +48,10 @@
 
         <!-- Row 2 -->
         <ListBox Grid.Row="2" Grid.Column="1"  x:Name="Projects"
-                 SelectedItem="{Binding Path=SelectedProject, Mode=OneWayToSource}"
-                 DisplayMemberPath="Address"></ListBox>
+                 
+            SelectedItem="{Binding Path=SelectedProject, Mode=OneWayToSource}"
+                 DisplayMemberPath="Address">
+        </ListBox>
         
         <ListBox Grid.Row="2" Grid.Column="2"  x:Name="CheckSet"
                  SelectedItem="{Binding Path=SelectedCheckSet, Mode=OneWayToSource}"
