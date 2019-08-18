@@ -14,12 +14,12 @@ namespace FinalDraft.ViewModels
 
         public ShellViewModel()
         {
-            Projects.Add(new ProjectModel { ProjectNumber = "SD12344", Address = "123 Fake Street", DueDate="Aug 15 2019", Status="InProcess", Notes="New mweting Notes" });
-            Projects.Add(new ProjectModel { ProjectNumber = "SD122244", Address = "123 10Th Street", DueDate = "Aug 15 2019", Status = "Wait", Notes = "" });
-            Projects.Add(new ProjectModel { ProjectNumber = "SD111344", Address = "123 Second Street", DueDate = "Aug 20 2019", Status = "InProcess", Notes = "May meeting notes 123" });
-            Projects.Add(new ProjectModel { ProjectNumber = "CD16344", Address = "1213 8Th Street", DueDate = "Dec 5 2019", Status = "Wait", Notes = "April meeting notes" });
-            Projects.Add(new ProjectModel { ProjectNumber = "SS123334", Address = "1234 2nd Street", DueDate = "Nov 17 2019", Status = "InProcess", Notes = "Another meeting Notees" });
-            Projects.Add(new ProjectModel { ProjectNumber = "AD12344", Address = "1235 9Th Street", DueDate = "Sept 15 2019", Status = "Wait", Notes = "Another meeting Notes" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "SD12344", CivicAddress = "123 Fake Street", DueDate="Aug 15 2019", Status="InProcess", Notes="New mweting Notes" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "SD122244", CivicAddress = "123 10Th Street", DueDate = "Aug 15 2019", Status = "Wait", Notes = "" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "SD111344", CivicAddress = "123 Second Street", DueDate = "Aug 20 2019", Status = "InProcess", Notes = "May meeting notes 123" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "CD16344", CivicAddress = "1213 8Th Street", DueDate = "Dec 5 2019", Status = "Wait", Notes = "April meeting notes" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "SS123334", CivicAddress = "1234 2nd Street", DueDate = "Nov 17 2019", Status = "InProcess", Notes = "Another meeting Notees" });
+            Projects.Add(new ProjectModel { ProjectId_Num = "AD12344", CivicAddress = "1235 9Th Street", DueDate = "Sept 15 2019", Status = "Wait", Notes = "Another meeting Notes" });
 
         }
 

@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:FinalDraft.Views"
         mc:Ignorable="d"  FontSize="18"
         Title="ShellView" Height="768" Width="1024">
+    
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -26,7 +28,23 @@
             <RowDefinition Height="20" />
             
         </Grid.RowDefinitions>
-        
+
+        <DockPanel Grid.Row="0" Grid.Column="1">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_New Project" x:Name="LoadNewProject">
+                    
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+
         <!--0-->
         <!--<Image Source="/Images/finaldraft_logo.png" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"></Image>-->
 
@@ -50,16 +68,16 @@
         <ListBox Grid.Row="2" Grid.Column="1"  x:Name="Projects"
                  
             SelectedItem="{Binding Path=SelectedProject, Mode=OneWayToSource}"
-                 DisplayMemberPath="Address">
+                 DisplayMemberPath="CivicAddress">
         </ListBox>
         
         <ListBox Grid.Row="2" Grid.Column="2"  x:Name="CheckSet"
                  SelectedItem="{Binding Path=SelectedCheckSet, Mode=OneWayToSource}"
-                 DisplayMemberPath="Address"></ListBox>
+                 DisplayMemberPath="CivicAddress"></ListBox>
         
         <ListBox Grid.Row="2" Grid.Column="3"  x:Name="Engineer"
                  SelectedItem="{Binding Path=SelectedCheckSet, Mode=OneWayToSource}"
-                 DisplayMemberPath="Address"></ListBox>
+                 DisplayMemberPath="CivicAddress"></ListBox>
         
         <StackPanel Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Orientation="Vertical" Margin="10 0 10 0">
             <TextBlock>Project#</TextBlock>
@@ -69,8 +87,8 @@
             <TextBlock>Notes</TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Orientation="Vertical" >
-            <TextBlock  x:Name="SelectedProject_ProjectNumber" />
-            <TextBlock  x:Name="SelectedProject_Address" />
+            <TextBlock  x:Name="SelectedProject_ProjectId_Num" />
+            <TextBlock  x:Name="SelectedProject_CivicAddress" />
             <TextBlock  x:Name="SelectedProject_DueDate" />
             <TextBlock  x:Name="SelectedProject_Status" />
             <TextBlock  x:Name="SelectedProject_Notes" />
@@ -80,7 +98,7 @@
         
         <!-- Row 3-->
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="10 0 0 5">
-            <Button Background="FloralWhite"  x:Name="LoadNewProject" Grid.Row="3" Grid.Column="1" Margin="0 0 5 0">Add New Project</Button>
+            <!--<Button Background="FloralWhite"  x:Name="LoadNewProject" Grid.Row="3" Grid.Column="1" Margin="0 0 5 0">Add New Project</Button>-->
             <Button Background="FloralWhite" x:Name="LoadNewCustomer" Grid.Row="3" Grid.Column="2" Margin="0 0 5 0">Add New Customer</Button>
             <Button Margin="0 0 5 0">Add Meeting</Button>
             <Button Margin="0 0 5 0">Add Invoicing</Button>

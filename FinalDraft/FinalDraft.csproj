@@ -8,10 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+    <PackageReference Include="Dapper" Version="1.60.6" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinalDraftLibrary\FinalDraftLibrary.csproj" />
   </ItemGroup>
 
 </Project>
