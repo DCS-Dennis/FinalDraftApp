@@ -19,11 +19,14 @@ namespace FinalDraft.Models
         public int InvoicingId { get; set; }
         public int MeetingCommunicationsId { get; set; }
         public int DocumentsId { get; set; }
+        public int ArchitecturalRequirmentsId { get; set; }
 
         public string DueDate { get; set; }
 
         public string Status { get; set; }
 
         public string Notes { get; set; }
+
+
     }
 }
